@@ -16,6 +16,7 @@
     $_GET[decode(arguments[1])] = decode(arguments[2]);
   });
 
+  var searchTerm="Search by name";
   var route = {
     URL: "/v1/recipes",
     template: "recipe_line",
@@ -25,6 +26,10 @@
     route.URL = '/v1/recipes/'+$_GET['recipe_id'];
     route.template = "recipe_single";
     route.placeHolder = $("body");
+  }
+  if ($_GET['where']) {
+    route.URL = '/v1/recipes/?where='+$_GET['where'];
+    searchTerm=$_GET['where'];
   }
   var recipe_template = $('#'+route.template).html();
   var template = Handlebars.compile(recipe_template);
@@ -42,3 +47,7 @@ Handlebars.registerHelper("everyOther", function (index, amount, scope) {
     else 
         return scope.fn(this);
 });
+
+searchRecipes = function() {
+  document.location.href="/?where="+$("#where").val();
+}
