@@ -61,6 +61,17 @@
 <div class="recipe_display">
   <h1><small><a href="javascript:history.back()" class="small">&lt;&lt;</a></small>&nbsp;{{name}}</h1>
   <div><blockquote><em>{{description}}</em></blockquote></div>
+  <div class="row">
+    <div class="small-2 large-2 columns">Cooking time:</div>
+    <div class="small-8 large-18 columns">{{cooking_time}}</div>
+  </div>
+  <div class="row">
+    <div class="small-2 large-2 columns">Prep time:</div>
+    <div class="small-9 large-15 columns">{{prep_time}}</div>
+  </div>
+  <br />
+
+<div style="border: 1px solid black;">
   <div class="row" style="background-color: #c0c0c0;">
     <div class="small=11 large=13 columns"><h3>Ingredients</h3></div>
   </div>
@@ -75,6 +86,16 @@
   </div>
   {{/ingredients}}
 </div>
+
+<div style="border: 1px solid black;">
+  <div class="row" style="background-color: #c0c0c0;">
+    <div class="small=11 large=13 columns"><h3>Instructions</h3></div>
+  </div>
+  <div>
+  {{{instructions}}}
+  </div>
+</div>
+
   </script>
   <script id="recipe_line" type="text/x-handlebars-template">
 <li><a href="?recipe_id={{id}}">{{name}}</a></li>
