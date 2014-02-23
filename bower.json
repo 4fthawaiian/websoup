@@ -1,0 +1,23 @@
+{
+  "name": "websoup",
+  "version": "0.0.1",
+  "homepage": "https://github.com/4fthawaiian/websoup",
+  "authors": [
+    "brad@mccroreys.com"
+  ],
+  "description": "new pure-client-side JS app for yummysoup recipe display",
+  "main": "index.html",
+  "keywords": [
+    "yummysoup",
+    "foundation",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
