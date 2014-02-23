@@ -51,3 +51,14 @@ Handlebars.registerHelper("everyOther", function (index, amount, scope) {
 searchRecipes = function() {
   document.location.href="/?where="+$("#where").val();
 }
+
+$(function() {
+    $("#where").keypress(function (e) {
+        if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+            $('#search_button').click();
+            return false;
+        } else {
+            return true;
+        }
+    });
+});
