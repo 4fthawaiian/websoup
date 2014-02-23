@@ -6,18 +6,19 @@
     "brad@mccroreys.com"
   ],
   "description": "new pure-client-side JS app for yummysoup recipe display",
-  "main": "index.html",
-  "keywords": [
-    "yummysoup",
-    "foundation",
-    "jquery"
-  ],
+  "main": "public/index.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "public/js/vendor",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "handlebars": "~1.3.0",
+    "jquery": "~2.1.0",
+    "foundation": "~5.1.1"
+  }
 }
