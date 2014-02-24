@@ -52,6 +52,26 @@ searchRecipes = function() {
   document.location.href="/?where="+$("#where").val();
 }
 
+function imageExists(image_url){
+    var http = new XMLHttpRequest();
+    http.open('HEAD', image_url, false);
+    http.send();
+    return http.status != 404;
+}
+
+Handlebars.registerHelper('parsedInstructions', function(instructions) {
+  return instructions.replace(/(\r|\n)/gm, "<br />");
+});
+Handlebars.registerHelper('recipeImage', function() {
+  console.log("id from helper: %s", this.id);
+  var imagePath = '/images/recipe_images/'+this.id+'-Image1.jpg';
+  if(imageExists("http://"+document.location.host+imagePath)) {
+    console.log(imagePath);
+    return imagePath;
+  }
+  return false;
+});
+
 $(function() {
     $("#where").keypress(function (e) {
         if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
