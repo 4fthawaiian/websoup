@@ -8,7 +8,7 @@
   "dependencies": {
     "express": "3.4.8",
     "jade": "*",
-    "bower": "0.6.x",
+    "bower": "*",
     "sqlite3": "~2.2.0",
     "dbox": "~0.6.3"
   },
