@@ -4,8 +4,6 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var data = require('./lib/data');
@@ -29,8 +27,6 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-//app.get('/', routes.index);
-//app.get('/users', user.list);
 
 app.get('/v1/recipes', data.recipes);
 app.get('/v1/recipes/:id', data.recipes);
