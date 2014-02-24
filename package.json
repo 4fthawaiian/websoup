@@ -11,4 +11,7 @@
     "sqlite3": "~2.2.0",
     "dbox": "~0.6.3"
   }
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  }
 }
